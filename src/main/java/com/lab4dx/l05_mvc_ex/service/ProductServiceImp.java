@@ -14,7 +14,7 @@ public class ProductServiceImp implements ProductService {
     private ProductDao productDao;
     public ProductServiceImp() throws Exception{
         conn= DBConnection.getConnection();
-        //conn.setAutoCommit(true);
+        conn.setAutoCommit(false);
         productDao=new ProdectDaoImp(conn);
     }
 

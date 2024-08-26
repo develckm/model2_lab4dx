@@ -15,12 +15,15 @@
 </head>
 <body>
 <div class="container">
-  <h1>상품상세</h1>
+  <h1 class="my-4">상품상세</h1>
+  <p class="text-end my-2">
+    <a href="./productRegister.do">등록페이지</a>
+  </p>
+
   <%
     Object productObj =request.getAttribute("product");
     ProductDto product=(ProductDto) productObj;
   %>
-  <%=product%>
   <div class="card text-left">
     <div class="card-body">
       <h4 class="card-title">상품이름 : <%=product.getProductName()%></h4>
@@ -28,6 +31,9 @@
       <p class="card-text">상품가격 : <%=product.getProductPrice()%></p>
     </div>
   </div>
+  <p class="text-end my-4">
+    <a href="./productModify.do?id=<%=product.getProductId()%>">수정페이지</a>
+  </p>
 </div>
 </body>
 </html>

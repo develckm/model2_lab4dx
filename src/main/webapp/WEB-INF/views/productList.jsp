@@ -15,12 +15,15 @@
 </head>
 <body>
 <div class="container">
-  <h1>상품리스트</h1>
+  <h1 class="my-4">상품리스트</h1>
+  <p class="text-end my-2">
+    <a href="./productRegister.do">등록페이지</a>
+  </p>
+
   <%
     Object productsObj =request.getAttribute("products");
     List<ProductDto> products=(List<ProductDto>)productsObj;
   %>
-  <%=products%>
   <table class="table">
     <thead>
     <tr>
